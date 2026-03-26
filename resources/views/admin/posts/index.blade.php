@@ -8,7 +8,7 @@
         <!-- Topbar -->
         <div class="topbar d-flex justify-content-between align-items-center">
             <h5 class="mb-0">Danh sách bài viết</h5>
-            <button class="btn btn-primary">+ Tạo mới</button>
+            <a href="{{ route('admin.posts.create') }}" class="btn btn-primary">+ Thêm mới</a>
         </div>
 
         <div class="p-1">
@@ -48,7 +48,8 @@
                                     <td>{{ $post->view }} </td>
                                     <td>{{ $post->created_at->format('d-m-Y') }}</td>
                                     <td>
-                                        <button class="btn btn-warning btn-sm">Sửa</button>
+                                        <a href="{{ route('admin.posts.edit', $post->id) }}"
+                                            class="btn btn-warning btn-sm">Sửa</a>
                                         <form class="d-inline" action="{{ route('admin.posts.destroy', $post->id) }}"
                                             method="post">
                                             @csrf

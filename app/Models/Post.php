@@ -10,6 +10,15 @@ class Post extends Model
     /** @use HasFactory<\Database\Factories\PostFactory> */
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'image',
+        'description',
+        'content',
+        'view',
+        'category_id'
+    ];
+
     //relationship
     public function category()
     {
