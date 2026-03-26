@@ -1,0 +1,40 @@
+body {
+    background-color: #f4f6f9;
+}
+
+.sidebar {
+    height: 100vh;
+    background: #343a40;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar a {
+    color: #adb5bd;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.sidebar a:hover {
+    background: #495057;
+    color: #fff;
+}
+
+.topbar {
+    background: #fff;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.table img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 6px;
+}
