@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreRequestPost;
+use App\Http\Requests\UpdateRequestPost;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
@@ -30,7 +32,7 @@ class PostController extends Controller
         return view('admin.posts.create', compact('categories'));
     }
     //Lưu
-    public function store(Request $request)
+    public function store(StoreRequestPost $request)
     {
         $data = $request->except('image');
 
@@ -56,7 +58,7 @@ class PostController extends Controller
         return view('admin.posts.edit', compact('post', 'categories'));
     }
     //Cập nhật
-    public function update(Request $request, $id)
+    public function update(UpdateRequestPost $request, $id)
     {
         $data = $request->except('image');
         if ($request->hasFile('image')) {
